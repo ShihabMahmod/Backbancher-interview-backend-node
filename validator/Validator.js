@@ -13,5 +13,19 @@ class Validator {
     }
     return { success: true };
   }
+  static async productValidation(data) {
+    let rules = {
+      name: "required|min:3|max:50",
+      price: "required",
+      quantity: "required|integer",
+      description: "required|min:50",
+    };
+    let validation = new validate(data, rules);
+    if (validation.fails()) {
+      return validation.errors.all();
+    }
+    return { success: true };
+  }
+
 }
 export default Validator;
