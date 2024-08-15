@@ -13,12 +13,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.get("/", (req, res) => {
-  return res.json({ message: "Server on fire.." });
-});
+// app.get("/", (req, res) => {
+//   return res.json({ message: "Server on fire.." });
+// });
 
 // * Routes
-//  app.use(Routes);
+app.use(Routes);
 
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`));
 
