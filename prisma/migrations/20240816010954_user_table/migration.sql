@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `user` ADD COLUMN `is_admin` INTEGER NOT NULL DEFAULT 0;
